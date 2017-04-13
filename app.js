@@ -1,6 +1,8 @@
 var fs = require('fs');
 var inquirer = require('inquirer');
 
+flashCards()
+
 function BasicCard(front, back){
 	this.front = front;
 	this.back = bcak;
@@ -35,3 +37,30 @@ ClozeCard.prototype.partial = function(){
 		return 'wrong input';
 	}
 };
+
+function flashCards(){
+	if (process.argv[2] === 'basic'){
+		inquirer.prompt([{
+			name: "Front:",
+			message: "Enter the question: "
+		},{
+			name: "Back:",
+			message: "Enter the answer: " 
+		}]).then(function(answer){
+			var BasicCard = new BasicCard(answer.front, answer.back);
+			BasicCard.card();
+		});
+	}
+	else if (process.argv[2] === "cloze"){
+		inquirer.prompt([{
+			name: "Text:",
+			message: "Enter full text:"
+		},{
+			name: "Cloze",
+			message: "Enter cloze text:"
+		}]).then(function(answer){
+			var ClozeCard = new ClozeCard(answer.text, answer.cloze);
+			ClozeCard.card();
+		});
+	}
+}
