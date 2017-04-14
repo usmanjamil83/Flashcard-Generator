@@ -1,15 +1,22 @@
 {
-  "name": "Flashcard-Generator",
+  "name": "flashcard-generator",
   "version": "1.0.0",
-  "description": "It is an API on the backend for a basic flashcard application.",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Usman Jamil",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usmanjamil83/Flashcard-Generator.git"
+  },
+  "author": "",
   "license": "ISC",
- "dependencies": {
-    "express": "^4.15.2",
+  "bugs": {
+    "url": "https://github.com/usmanjamil83/Flashcard-Generator/issues"
+  },
+  "homepage": "https://github.com/usmanjamil83/Flashcard-Generator#readme",
+  "dependencies": {
     "inquirer": "^3.0.6"
   }
 }
